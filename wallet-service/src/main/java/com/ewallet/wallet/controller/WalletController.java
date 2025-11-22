@@ -25,7 +25,7 @@ public class WalletController {
 
     @GetMapping("/{customerId}")
     @Operation(summary = "Get wallet details by customer ID")
-    public ResponseEntity<WalletResponse> getWalletByCustomerId(@PathVariable Long customerId) {
+    public ResponseEntity<WalletResponse> getWalletByCustomerId(@PathVariable("customerId") Long customerId) {
         logger.info("GET /wallets/{}", customerId);
         try {
             WalletResponse response = walletService.getWalletByCustomerId(customerId);
@@ -54,7 +54,7 @@ public class WalletController {
     @PostMapping("/{walletId}/debit")
     @Operation(summary = "Debit wallet for a payment")
     public ResponseEntity<DebitResponse> debitWallet(
-            @PathVariable Long walletId,
+            @PathVariable("walletId") Long walletId,
             @Valid @RequestBody DebitRequest request) {
         logger.info("POST /wallets/{}/debit - paymentId: {}, amount: {}", 
             walletId, request.getPaymentId(), request.getAmount());

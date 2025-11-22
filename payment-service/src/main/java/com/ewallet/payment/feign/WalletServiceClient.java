@@ -14,6 +14,6 @@ public interface WalletServiceClient {
     BalanceValidationResponse validateBalance(@RequestBody BalanceValidationRequest request);
     
     @PostMapping("/wallets/{walletId}/debit")
-    DebitResponse debitWallet(@PathVariable Long walletId, @RequestBody DebitRequest request);
+    DebitResponse debitWallet(@PathVariable("walletId") Long walletId, @RequestBody DebitRequest request);
 }
 

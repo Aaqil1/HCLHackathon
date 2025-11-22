@@ -24,13 +24,6 @@ spring:
       data-locations: classpath:data.sql
   kafka:
     bootstrap-servers: localhost:9092
-    consumer:
-      group-id: notification-service-group
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      properties:
-        spring.json.trusted.packages: "*"
-        spring.json.value.default.type: com.ewallet.notification.dto.PaymentNotificationEvent
 
 server:
   port: 8083

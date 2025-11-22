@@ -93,8 +93,7 @@ CREATE TABLE IF NOT EXISTS wallet_transactions (
     balance_before DECIMAL(18,2) NOT NULL,
     balance_after DECIMAL(18,2) NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (wallet_account_id) REFERENCES wallet_accounts(id),
-    FOREIGN KEY (payment_id) REFERENCES payments(id)
+    FOREIGN KEY (wallet_account_id) REFERENCES wallet_accounts(id)
 );
 
 -- Settlements

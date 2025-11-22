@@ -41,7 +41,7 @@ public class PaymentController {
     @PostMapping("/{paymentId}/process")
     @Operation(summary = "Process a validated payment")
     public ResponseEntity<ProcessPaymentResponse> processPayment(
-            @PathVariable Long paymentId,
+            @PathVariable("paymentId") Long paymentId,
             @Valid @RequestBody ProcessPaymentRequest request) {
         logger.info("POST /payments/{}/process", paymentId);
         try {

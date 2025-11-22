@@ -13,8 +13,8 @@ INSERT INTO customers (id, full_name, email, phone_number, status) VALUES
 
 -- Wallet Accounts (one per customer)
 INSERT INTO wallet_accounts (id, customer_id, wallet_number, currency, balance_amount, status) VALUES
-(5001, 1001, 'WALLET-ALICE-001', 'USD', 250.50, 'ACTIVE'),
-(5002, 1002, 'WALLET-BOB-001', 'USD', 500.00, 'ACTIVE');
+(5001, 1001, 'WALLET-ALICE-001', 'USD', 10000.50, 'ACTIVE'),
+(5002, 1002, 'WALLET-BOB-001', 'USD', 5000.00, 'ACTIVE');
 
 -- Merchants
 INSERT INTO merchants (id, name, merchant_code, notification_email, notification_webhook, status) VALUES
