@@ -1,5 +1,6 @@
 package com.ewallet.notification.service;
 
+import com.ewallet.notification.dto.NotificationResponse;
 import com.ewallet.notification.dto.PaymentNotificationEvent;
 import com.ewallet.notification.entity.Merchant;
 import com.ewallet.notification.entity.NotificationEvent;
